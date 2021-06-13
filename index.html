@@ -24,8 +24,10 @@
         <!-- Меню -->
         <nav>
           <ul class="nav-list list">
-            <li class="nav-list-item current">
-              <a href="./index.html" class="nav-list-link link">Студия</a>
+            <li class="nav-list-item">
+              <a href="./index.html" class="nav-list-link link current"
+                >Студия</a
+              >
             </li>
             <li class="nav-list-item">
               <a href="./portfolio.html" class="nav-list-link link"
@@ -64,7 +66,9 @@
       <section class="hero-section section">
         <div class="container hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="order-button">Заказать услугу</button>
+          <button data-modal-open type="button" class="order-button">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -131,21 +135,34 @@
           <h2 class="container-title">Чем мы занимаемся</h2>
           <ul class="offers-list list">
             <li class="offers-item">
-              <img
-                src="./images/image1.jpg"
-                alt="Разработка сайтов"
-                width="370"
-              />
+              <div class="offers-thumb">
+                <img
+                  src="./images/image1.jpg"
+                  alt="Десктопные приложения"
+                  width="370"
+                />
+                <h3 class="offers-label">Десктопные приложения</h3>
+              </div>
             </li>
             <li class="offers-item">
-              <img
-                src="./images/image2.jpg"
-                alt="Разработка приложений"
-                width="370"
-              />
+              <div class="offers-thumb">
+                <img
+                  src="./images/image2.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                />
+                <h3 class="offers-label">Мобильные приложения</h3>
+              </div>
             </li>
             <li class="offers-item">
-              <img src="./images/image3.jpg" alt="Брендинг" width="370" />
+              <div class="offers-thumb">
+                <img
+                  src="./images/image3.jpg"
+                  alt="Дизайнерские решения"
+                  width="370"
+                />
+                <h3 class="offers-label">Дизайнерские решения</h3>
+              </div>
             </li>
           </ul>
         </div>
@@ -543,5 +560,21 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close type="button" class="close-button">
+          <svg class="close-button-svg">
+            <use
+              href="./images/icons.svg#icon-close-button"
+              width="11"
+              height="11"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
